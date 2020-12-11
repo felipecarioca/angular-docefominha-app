@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h2>Editar Produtos</h2>
+            <form [formGroup]="FormProduto">
+                <div>
+                    <label>Id </label>
+                    <input type="text" placeholder="" formControlName="Id" disabled>
+                    <small>Erro! O nome deve conter entre 2 e 20 caracteres</small>
+                </div>
+                <div>
+                    <label>Nome </label>
+                    <input type="text" placeholder="Digite o nome do produto" formControlName="Nome">
+                    <small>Erro! O nome deve conter entre 2 e 20 caracteres</small>
+                </div>
+                <div>
+                    <label>Preco</label>
+                    <input type="number" placeholder="Digite o preço do produto" formControlName="Preco">
+                    <small>Erro! O preco deve conter entre 2 e 20 caracteres</small>
+                </div>
+                <div class="actions">
+                    <a class="btn btn-primary" (click) = "editarProduto()">
+                        Editar
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

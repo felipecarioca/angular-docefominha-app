@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <input type="text" value="" (keydown) = "AlterarFiltro($event.target)">
+    </div>
+    <ul>
+        <li class="row header">
+            <div class="col-lg-3">
+                Id
+            </div>
+            <div class="col-lg-3">
+                Nome
+            </div>
+            <div class="col-lg-3">
+                Preco
+            </div>
+            <div class="col-lg-3">
+                Acoes
+            </div>
+        </li>
+        <li class="row" *ngFor="let product of FiltrarProdutos()">
+            <div class="col-lg-3">
+                {{product._id}}
+            </div>
+            <div class="col-lg-3">
+                {{product.nome}}
+            </div>
+            <div class="col-lg-3">
+                {{product.preco}}
+            </div>
+            <div class="col-lg-3">
+                <a class="btn btn-primary" href="editar-produto/{{product._id}}">
+                    Editar
+                </a>
+                <a class="btn btn-secondary" (click)="Delete(product._id)">
+                    Excluir
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
